@@ -106,10 +106,12 @@ class Battlefield:
         thechosenone = int(input("Pick a dino 1-3:")) - 1
         if self.herd.dinosquad[thechosenone].maxHealth <= 0:
             print(f"{self.herd.dinosquad[thechosenone].name} is dead! pick a new dino")
+            return thechosenone
         elif self.herd.dinosquad[thechosenone].maxHealth > 0:
             return thechosenone
         else:
             print("Lets pick a real dino please")
+            self.show_dinos()
         
     def show_robo_opponent_options(self):
         if {self.herd.dinosquad[0]}.health >= 0:
