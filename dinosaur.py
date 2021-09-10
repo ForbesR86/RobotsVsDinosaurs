@@ -5,4 +5,5 @@ class Dinosaur:
         self.attackPower = randomAttackP
 
     def attack(self, robot):
-        robot.maxHealth -= self.attack_power
+        robot.maxHealth -= self.attackPower
+        print(self.name, 'hits ', robot.name, ' for ', self.attackPower)
