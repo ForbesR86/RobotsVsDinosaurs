@@ -10,9 +10,9 @@ class Fleet:
         full_name2=random.choice(first_names) + str(random.randint(1000,9999))
         full_name3=random.choice(first_names) + str(random.randint(1000,9999))
 
-        Robot1 = Robot(full_name1,random.randint(80,100), "weapon1")
-        Robot2 = Robot(full_name2,random.randint(80,100), "weapon2")
-        Robot3 = Robot(full_name3,random.randint(80,100), "weapon3")
+        Robot1 = Robot(full_name1,random.randint(80,100), 'weapon1')
+        Robot2 = Robot(full_name2,random.randint(80,100), 'weapon2')
+        Robot3 = Robot(full_name3,random.randint(80,100), 'weapon3')
         self.robots.append(Robot1)
         self.robots.append(Robot2)
         self.robots.append(Robot3)

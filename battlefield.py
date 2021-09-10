@@ -127,7 +127,7 @@ class Battlefield:
         else:
             print("Bot 3 ", {self.herd.dinosquad[2].name}, " is dead")
 
-        thechosenone = input("Pick a dino 1-3:") - 1
+        thechosenone = int(input("Pick a dino 1-3:")) - 1
         if self.herd.dinosquad[thechosenone].health <= 0:
             print(f"{self.herd.dinosquad[thechosenone].name} is dead! but lets go ahead and beat a dead body")
             return thechosenone
