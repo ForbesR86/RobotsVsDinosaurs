@@ -100,9 +100,9 @@ class Battlefield:
 
 
     def show_dinos(self):
-        print("Option 1: ", {self.herd.dinosquad[0].name}, "with ", {self.herd.dinosquad[0].maxHealth}, " health and ", {self.herd.dinosquad[0].attackPower}, "attack power")
-        print("Option 2: ", {self.herd.dinosquad[1].name}, "with ", {self.herd.dinosquad[1].maxHealth}, " health and ", {self.herd.dinosquad[1].attackPower}, "attack power")
-        print("Option 3: ", {self.herd.dinosquad[2].name}, "with ", {self.herd.dinosquad[2].maxHealth}, " health and ", {self.herd.dinosquad[2].attackPower}, "attack power")
+        print("Option 1: ", self.herd.dinosquad[0].name, "with ", self.herd.dinosquad[0].maxHealth, " health and ", self.herd.dinosquad[0].attackPower, "attack power")
+        print("Option 2: ", self.herd.dinosquad[1].name, "with ", self.herd.dinosquad[1].maxHealth, " health and ", self.herd.dinosquad[1].attackPower, "attack power")
+        print("Option 3: ", self.herd.dinosquad[2].name, "with ", self.herd.dinosquad[2].maxHealth, " health and ", self.herd.dinosquad[2].attackPower, "attack power")
         thechosenone = int(input("Pick a dino 1-3:")) - 1
         if self.herd.dinosquad[thechosenone].maxHealth <= 0:
             print(f"{self.herd.dinosquad[thechosenone].name} is dead! pick a new dino")
@@ -114,20 +114,20 @@ class Battlefield:
             self.show_dinos()
         
     def show_robo_opponent_options(self):
-        if {self.herd.dinosquad[0]}.health >= 0:
-            print("Option 1: ", {self.herd.dinosquad[0].name})
+        if self.herd.dinosquad[0].health >= 0:
+            print("Option 1: ", self.herd.dinosquad[0].name)
         else:
-            print("Bot 1 ", {self.herd.dinosquad[0].name}, " is dead")
+            print("Bot 1 ", self.herd.dinosquad[0].name, " is dead")
 
-        if {self.herd.dinosquad[1]}.health >= 0:
-            print("Option 2: ", {self.herd.dinosquad[1].name})
+        if self.herd.dinosquad[1].health >= 0:
+            print("Option 2: ", self.herd.dinosquad[1].name)
         else:
-            print("Bot 2 ", {self.herd.dinosquad[1].name}, " is dead")
+            print("Bot 2 ", self.herd.dinosquad[1].name, " is dead")
 
-        if {self.herd.dinosquad[2]}.health >= 0:
-            print("Option 3: ", {self.herd.dinosquad[2].name})
+        if self.herd.dinosquad[2].health >= 0:
+            print("Option 3: ", self.herd.dinosquad[2].name)
         else:
-            print("Bot 3 ", {self.herd.dinosquad[2].name}, " is dead")
+            print("Bot 3 ", self.herd.dinosquad[2].name, " is dead")
 
         thechosenone = int(input("Pick a dino 1-3:")) - 1
         if self.herd.dinosquad[thechosenone].health <= 0:
@@ -138,9 +138,9 @@ class Battlefield:
 
 
     def show_robos(self):
-        print("Option 1: ", {self.fleet.robots[0].name}, "with ", self.fleet.robots[0].maxHealth)
-        print("Option 2: ", {self.fleet.robots[1].name}, "with ", self.fleet.robots[1].maxHealth)
-        print("Option 3: ", {self.fleet.robots[2].name}, "with ", self.fleet.robots[2].maxHealth)
+        print("Option 1: ", self.fleet.robots[0].name, "with ", self.fleet.robots[0].maxHealth)
+        print("Option 2: ", self.fleet.robots[1].name, "with ", self.fleet.robots[1].maxHealth)
+        print("Option 3: ", self.fleet.robots[2].name, "with ", self.fleet.robots[2].maxHealth)
 
         thechosenone = input("Pick a robot 1-3:") - 1
         
