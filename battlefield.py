@@ -1,5 +1,6 @@
 from fleet import Fleet
 from herd import Herd
+import random
 class Battlefield:
     def __init__(self):
         self.fleet = Fleet()
@@ -50,7 +51,9 @@ class Battlefield:
             targetaquired = self.show_dino_opponent_options()
             self.herd.dinosquad[dinopick].attack(self.fleet.robots[targetaquired])
         elif playeruser != "dinosaurs":
-            pass
+            dinopick = random.randint(0,2)
+            targetaquired = random.randint(0,2)
+            self.herd.dinosquad[dinopick].attack(self.fleet.robots[targetaquired])
                 
 
 
@@ -60,7 +63,10 @@ class Battlefield:
             targetaquired = self.show_robo_opponent_options()
             self.fleet.robots[robopick].attack(self.herd.dinosquad[targetaquired])
         else:
-            pass
+            #generate a random number for the computer to play
+            robopick = random.randint(0,2)
+            targetaquired = random.randint(0,2)
+            self.fleet.robots[robopick].attack(self.herd.dinosquad[targetaquired])
 
                 
 
